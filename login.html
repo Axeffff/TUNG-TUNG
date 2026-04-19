@@ -45,6 +45,28 @@
             <div class="container">
                 <div class="auth-card">
                     <h2>WELCOME <span class="gradient-text">BACK</span></h2>
+                    
+                    <!-- Google Sign In Button -->
+                    <div id="g_id_onload"
+                        data-client_id="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
+                        data-context="signin"
+                        data-ux_mode="popup"
+                        data-callback="handleCredentialResponse"
+                        data-auto_prompt="false">
+                    </div>
+                    <div class="g_id_signin"
+                        data-type="standard"
+                        data-shape="rectangular"
+                        data-theme="outline"
+                        data-text="signin_with"
+                        data-size="large"
+                        data-logo_alignment="left">
+                    </div>
+
+                    <div class="auth-divider">
+                        <span>OR</span>
+                    </div>
+
                     <form class="auth-form">
                         <div class="form-group">
                             <label for="email">IDENTITY (EMAIL)</label>
@@ -75,7 +97,16 @@
         </div>
     </footer>
 
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="script.js"></script>
+    <script>
+        function handleCredentialResponse(response) {
+            console.log("Encoded JWT ID token: " + response.credential);
+            // Here you would typically send the token to your server or decode it locally
+            alert("Secure Link Established. Welcome, Explorer.");
+            window.location.href = 'index.html';
+        }
+    </script>
 </body>
 
 </html>

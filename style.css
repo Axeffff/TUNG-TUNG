@@ -452,6 +452,35 @@ footer {
     text-decoration: none;
 }
 
+.auth-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--text-dim);
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.auth-divider:not(:empty)::before {
+    margin-right: 1rem;
+}
+
+.auth-divider:not(:empty)::after {
+    margin-left: 1rem;
+}
+
+.g_id_signin {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
 /* Cart Specifics */
 .cart-items {
     margin-bottom: 2rem;
