@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO-MERCH | Futuristic Merchandise Store</title>
+    <meta name="description"
+        content="Premium futuristic merchandise including t-shirts, mugs, and badges. Step into the future of style.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="glow-bg"></div>
+
+    <header id="navbar">
+        <nav class="container">
+            <div class="logo">
+                <span class="logo-text">tung</span><span class="logo-accent">MERCH</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="active">Home</a></li>
+                <li><a href="index.html#products">Collection</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon" id="cart-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                        <path d="M3 6h18" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 class="reveal-text">WEAR THE <span class="gradient-text">FUTURE</span></h1>
+                    <p class="hero-description">Explore our exclusive collection of high-tech apparel and lifestyle
+                        merchandise. Designed for the next generation.</p>
+                    <div class="hero-btns">
+                        <a href="#products" class="btn btn-primary">Shop Now</a>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <img src="adam/S44294b203f9f40a0b98b151d32672f54f.jpg_960x960.jpg" alt="Futuristic T-Shirt"
+                            id="hero-img">
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">FEATURED <span class="gradient-text">COLLECTION</span></h2>
+                    <p>Exclusive futuristic designs for your daily life.</p>
+                </div>
+
+                <div class="product-grid" id="product-list">
+                    <!-- Products will be injected by JS or hardcoded for now -->
+                    <div class="product-card" data-category="tshirt">
+                        <div class="product-img-wrapper">
+                            <img src="adam/S44294b203f9f40a0b98b151d32672f54f.jpg_960x960.jpg" alt="Cyberpunk T-Shirt">
+                            <div class="product-badge">NEW</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>tung tung T-Shirt</h3>
+                            <p class="price">$67.00</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="mug">
+                        <div class="product-img-wrapper">
+                            <img src="adam/tung-sahur-italian-brainrot-meme-coffee-mug-20250516054706-hd2jilu4-s2.jpg"
+                                alt="Futuristic Mug">
+                        </div>
+                        <div class="product-info">
+                            <h3>SAHUR MUG</h3>
+                            <p class="price">$167.00</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="badge">
+                        <div class="product-img-wrapper">
+                            <img src="adam/kiss-cut-stickers-white-3x3-default-68a37f18d2d20.jpg"
+                                alt="Holographic Badge">
+                        </div>
+                        <div class="product-info">
+                            <h3>TRIPLE T BADGE</h3>
+                            <p class="price">$6767.00</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">NEO</span><span class="logo-accent">MERCH</span>
+                </div>
+                <p>&copy; 2026 NEO-MERCH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

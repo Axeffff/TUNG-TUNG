@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | NEO-MERCH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="glow-bg"></div>
+
+    <header id="navbar">
+        <nav class="container">
+            <div class="logo">
+                <span class="logo-text">tung</span><span class="logo-accent">MERCH</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#products">Collection</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon active" id="cart-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                        <path d="M3 6h18" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <div class="container">
+                <div class="cart-card">
+                    <h2>CARTO <span class="gradient-text">MANIFEST</span></h2>
+                    
+                    <div class="cart-items">
+                        <!-- Injected by script.js -->
+                    </div>
+
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>SUBTOTAL</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>FUTURE TAX (10%)</span>
+                            <span id="tax-total">CALCULATING...</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>TOTAL CREDIT</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                        <button class="btn btn-primary checkout-btn">FINALIZE TRANSACTION</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">NEO</span><span class="logo-accent">MERCH</span>
+                </div>
+                <p>&copy; 2026 NEO-MERCH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Update tax display since it's not handled in the main script's updateSummary fully
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new MutationObserver(() => {
+                const subtotal = parseFloat(document.getElementById('subtotal').textContent.replace('$', ''));
+                document.getElementById('tax-total').textContent = `$${(subtotal * 0.1).toFixed(2)}`;
+            });
+            observer.observe(document.getElementById('subtotal'), { childList: true });
+        });
+    </script>
+</body>
+
+</html>
